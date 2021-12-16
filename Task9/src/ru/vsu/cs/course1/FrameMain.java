@@ -137,7 +137,7 @@ public class FrameMain extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
-                    int[][] matrix = ArrayUtils.readIntArray2FromFile(fileChooserOpen.getSelectedFile().getPath());
+                    int[][] matrix = JTableUtils.readIntMatrixFromJTable(tableInput);
                     ArrayList<Integer> list1 = Task.ArrToList(matrix[0]);
                     ArrayList<Integer> list2 = Task.ArrToList(matrix[1]);
                     ArrayList<Integer> list = Task.solution(list1, list2);
